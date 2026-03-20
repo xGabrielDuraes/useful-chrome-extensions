@@ -1,0 +1,81 @@
+{
+   "action": {
+      "default_title": "Open popup"
+   },
+   "background": {
+      "service_worker": "background.js",
+      "type": "module"
+   },
+   "commands": {
+      "data-export": {
+         "description": "Data Export"
+      },
+      "data-import": {
+         "description": "Data Import"
+      },
+      "event-monitor": {
+         "description": "Event Monitor"
+      },
+      "explore-api": {
+         "description": "Explore API"
+      },
+      "field-creator": {
+         "description": "Field Creator"
+      },
+      "limits": {
+         "description": "Org Limits"
+      },
+      "link-dev": {
+         "description": "Open Developer Console"
+      },
+      "link-home": {
+         "description": "Open Home Page"
+      },
+      "link-setup": {
+         "description": "Open Setup"
+      },
+      "metadata-retrieve": {
+         "description": "Retrieve Metadata"
+      },
+      "open-export-autocomplete": {
+         "description": "Fields suggestion in Data Export"
+      },
+      "open-export-execute": {
+         "description": "Run Query in Data Export"
+      },
+      "open-popup": {
+         "description": "Open popup"
+      },
+      "options": {
+         "description": "Options"
+      },
+      "rest-explore": {
+         "description": "REST Explore"
+      }
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "css": [ "button.css", "inspect-inline.css" ],
+      "js": [ "button.js", "inspect-inline.js" ],
+      "matches": [ "https://*.salesforce.com/*", "https://*.salesforce-setup.com/*", "https://*.visual.force.com/*", "https://*.vf.force.com/*", "https://*.lightning.force.com/*", "https://*.cloudforce.com/*", "https://*.visualforce.com/*", "https://*.sfcrmapps.cn/*", "https://*.sfcrmproducts.cn/*", "https://*.salesforce.mil/*", "https://*.visual.force.mil/*", "https://*.vf.force.mil/*", "https://*.lightning.force.mil/*", "https://*.cloudforce.mil/*", "https://*.visualforce.mil/*", "https://*.crmforce.mil/*", "https://*.lightning.force.com.mcas.ms/*", "https://*.force.com/*", "https://*.builder.salesforce-experience.com/*" ]
+   } ],
+   "description": "Productivity tools for Salesforce administrators and developers to inspect data and metadata directly from the Salesforce UI.",
+   "host_permissions": [ "https://*.salesforce.com/*", "https://*.salesforce-setup.com/*", "https://*.force.com/*", "https://*.cloudforce.com/*", "https://*.visualforce.com/*", "https://*.sfcrmapps.cn/*", "https://*.sfcrmproducts.cn/*", "https://*.salesforce.mil/*", "https://*.force.mil/*", "https://*.cloudforce.mil/*", "https://*.visualforce.mil/*", "https://*.crmforce.mil/*", "https://*.force.com.mcas.ms/*", "https://*.builder.salesforce-experience.com/*" ],
+   "icons": {
+      "128": "icon128.png"
+   },
+   "incognito": "split",
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjGb5YK3wmmLz702pozWYFILiecvui7hwvuGklbkVWL4qooDclDDnWyf93H1zfo0CzRvQzf2IlleNbgBpD1ag3NOdExC85ciY5sz4v+bacfKObLzFSUeG5+3WSu7NZnDEA8e6qIJOtJUx89VBVqsl5jLhvaJAFinpWSfGins8fL2tZg/yip+d/KRjEwSonnJHRUX7/aUv+Sc8bRMrNUcsddcFE31cjBfe94yUDJ5iqUq2BJJe158VgL3IAPDo1obf0fgzAa9dMb4F4xJdYenkZnOSKGSOAYZer0Kx2bCtyS0XesSeA+uxZiRxlo3Du9gfRQFSRlJGVSF4AP9/0x4C0QIDAQAB",
+   "manifest_version": 3,
+   "minimum_chrome_version": "88",
+   "name": "Salesforce Inspector Reloaded",
+   "permissions": [ "cookies" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.271",
+   "version_name": "1.27",
+   "web_accessible_resources": [ {
+      "extension_ids": [  ],
+      "matches": [ "https://*.salesforce.com/*", "https://*.salesforce-setup.com/*", "https://*.visual.force.com/*", "https://*.vf.force.com/*", "https://*.lightning.force.com/*", "https://*.cloudforce.com/*", "https://*.visualforce.com/*", "https://*.sfcrmapps.cn/*", "https://*.sfcrmproducts.cn/*", "https://*.salesforce.mil/*", "https://*.visual.force.mil/*", "https://*.vf.force.mil/*", "https://*.lightning.force.mil/*", "https://*.cloudforce.mil/*", "https://*.visualforce.mil/*", "https://*.crmforce.mil/*", "https://*.lightning.force.com.mcas.ms/*", "https://*.force.com/*", "https://*.builder.salesforce-experience.com/*" ],
+      "resources": [ "popup.html", "data-export.html", "data-import.html", "inspect.html", "metadata-retrieve.html", "metadata-retrieve-legacy.html", "explore-api.html", "rest-explore.html", "limits.html", "inject.js", "field-creator.html", "options.html", "event-monitor.html" ]
+   } ]
+}
